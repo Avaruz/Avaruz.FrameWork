@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Avaruz.FrameWork.DAF.AdoHelper">
+    <Position X="2.75" Y="0.5" Width="3.75" />
+    <NestedTypes>
+      <Enum Name="Avaruz.FrameWork.DAF.AdoHelper.AdoConnectionOwnership" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AdoHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="Avaruz.FrameWork.DAF.AdoHelper.RowUpdatingHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AdoHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Avaruz.FrameWork.DAF.AdoHelper.RowUpdatedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AdoHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EGCQgFiAEECAAKgkABQEBESAgAACMAABgkgAARIAAIA=</HashCode>
+      <FileName>AdoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.ADOHelperParameterCache" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AdoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.Common" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.DAABSectionHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAABSectionHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.ProviderAlias" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAEAACAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DAABSectionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.Odbc" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAEAACAAAAAgEAAAAAAAAAAACMAAAgAgAABAAAAA=</HashCode>
+      <FileName>Odbc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.OleDb" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAEAAAAAAAAgEAAAAAAAAAAACMAAAgAgAABAAAAA=</HashCode>
+      <FileName>OleDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.SafeDataReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCCQAAAgMCgAAAABCAIIBCYgAAJEAEQwIBQAAACAJEA=</HashCode>
+      <FileName>SafeDataReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.SentencesClass" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAgAAAQAAA=</HashCode>
+      <FileName>SentencesClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.SqlServer">
+    <Position X="9.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACQAEAAAAAAAAgEAAAAAAAAAAACMAAAgggAABAAAAA=</HashCode>
+      <FileName>SqlServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avaruz.FrameWork.DAF.SqlDeriveParameters">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgCAAAAAAAAIAAAAAAAgAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>SqlServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
