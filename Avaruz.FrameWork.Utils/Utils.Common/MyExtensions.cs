@@ -42,6 +42,7 @@ namespace Avaruz.FrameWork.Utils.Common
             //return the value in string format
             return newDateTime.ToLocalTime();
         }
+
     }
 
 }
