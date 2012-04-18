@@ -34,13 +34,35 @@ namespace Avaruz.FrameWork.Utils.Common
         private static DateTime ConvertTimestamp(double timestamp)
         {
             //create a new DateTime value based on the Unix Epoch
-            DateTime converted = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            var converted = new DateTime(1970, 1, 1, 0, 0, 0, 0);
 
             //add the timestamp to the value
-            DateTime newDateTime = converted.AddSeconds(timestamp);
+            var newDateTime = converted.AddSeconds(timestamp);
 
             //return the value in string format
             return newDateTime.ToLocalTime();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="S"></param>
+        /// <param name="T"></param>
+        public static void CopyTo(this object S, object T)
+        {
+            foreach (var pS in S.GetType().GetProperties())
+            {
+                foreach (var pT in T.GetType().GetProperties())
+                {
+                    if (pT.Name != pS.Name) continue;
+                    (pT.GetSetMethod()).Invoke(T, new object[] { pS.GetGetMethod().Invoke(S, null) });
+                }
+            };
+        }
+
+        public static string ToSiNo(this bool valor)
+        {
+            return valor ? "Si" : "No";
         }
 
     }
