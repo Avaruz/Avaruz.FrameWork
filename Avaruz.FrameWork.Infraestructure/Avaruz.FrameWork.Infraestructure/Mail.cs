@@ -9,6 +9,12 @@ namespace Avaruz.FrameWork.Infraestructure
     {
         private readonly SmtpClient _smtp;
 
+        public MailAddressCollection ToRecipients;
+
+        public MailAddressCollection CCRecipients;
+
+        public MailAddress FromEmail { get; set; }
+
         public Mail(SmtpDeliveryMethod deliveryMethod, string host, bool useDefaultCredentials)
         {
             _smtp = new SmtpClient
@@ -31,26 +37,10 @@ namespace Avaruz.FrameWork.Infraestructure
         }
 
 
-        public void SendMail(string toEmail, string asunto, string cuerpoMensaje, string fromEmail, bool masDeUnMail)
+        public void SendMail(string asunto, string cuerpoMensaje)
         {
-            var mail = new MailMessage();
-            if (masDeUnMail)
-            {
-                foreach (var buzon in toEmail.Split(',').Where(buzon => !String.IsNullOrWhiteSpace(buzon.Trim())).Where(buzon => !String.IsNullOrWhiteSpace(buzon)))
-                {
-                    mail.To.Add(buzon);
-                }
-            }
-            else
-            {
-                mail.To.Add(toEmail);
-            }
-
-            mail.From = new MailAddress(fromEmail);
-            mail.Subject = asunto;
-            mail.Body = cuerpoMensaje;
-
-            mail.IsBodyHtml = true;
+            var mail = new MailMessage {Subject = asunto, Body = cuerpoMensaje, IsBodyHtml = true};
+            _smtp.Send(mail);
 
             //var smtp = new SmtpClient
             //               {
@@ -63,10 +53,7 @@ namespace Avaruz.FrameWork.Infraestructure
             //////Or your Smtp Email ID and Password
             //smtp.Send(mail);
 
-
-
-            _smtp.Send(mail);
-        }
+       }
 
     }
 }
