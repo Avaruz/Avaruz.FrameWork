@@ -4,6 +4,10 @@ namespace Avaruz.FrameWork.Utils.Common
 {
     public static class MyExtensions
     {
+        public static T IfChangeUpdate<T>(T value1, T value2)
+        {
+            return !value1.Equals(value2) ? value2 : value1;
+        }
 
         public static DateTime ToDefaultDate(this string strfecha)
         {

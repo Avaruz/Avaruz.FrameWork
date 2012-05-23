@@ -43,6 +43,7 @@
     <Compile Include="MyExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\HashedPassword.cs" />
+    <Compile Include="Web\Controls.cs" />
     <Compile Include="Web\MyExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
