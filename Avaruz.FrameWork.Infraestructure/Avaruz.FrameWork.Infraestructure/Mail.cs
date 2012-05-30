@@ -39,7 +39,14 @@ namespace Avaruz.FrameWork.Infraestructure
 
         public void SendMail(string asunto, string cuerpoMensaje)
         {
-            var mail = new MailMessage {Subject = asunto, Body = cuerpoMensaje, IsBodyHtml = true};
+            var mail = new MailMessage { Subject = asunto, Body = cuerpoMensaje, IsBodyHtml = true};
+
+            foreach (var recipient in ToRecipients)
+            {
+                mail.To.Add(recipient);
+            }
+
+            mail.From = FromEmail;
             _smtp.Send(mail);
 
             //var smtp = new SmtpClient
@@ -53,7 +60,7 @@ namespace Avaruz.FrameWork.Infraestructure
             //////Or your Smtp Email ID and Password
             //smtp.Send(mail);
 
-       }
+        }
 
     }
 }
