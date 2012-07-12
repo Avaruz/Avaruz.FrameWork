@@ -29,10 +29,12 @@ namespace Avaruz.FrameWork.Controls.Web
         private string _nombreBase;
 
         public List<ListItem> DatosDdl = new List<ListItem>();
+        private bool _useDefaultCSSClass;
+        private bool _useBorder;
 
         public GridViewTemplate(ListItemType type,
             string colname, string col, string dataType, ControlType typeControl, bool isEnable, int widthInPixel,
-            bool verticalHeader = false, string nombreBase = "")
+            bool verticalHeader = false, string nombreBase = "", bool useDefaultCSSClass = true, bool useBorder = true)
         {
             _templateType = type;
             _columnName = colname;
@@ -43,6 +45,8 @@ namespace Avaruz.FrameWork.Controls.Web
             _widthInPixel = widthInPixel;
             _verticalHeader = verticalHeader;
             _nombreBase = nombreBase;
+            _useDefaultCSSClass = useDefaultCSSClass;
+            _useBorder = useBorder;
         }
 
         void ITemplate.InstantiateIn(System.Web.UI.Control container)
@@ -79,10 +83,18 @@ namespace Avaruz.FrameWork.Controls.Web
 
                             TextBox edt = new TextBox();
                             edt.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "edt" + _col : _nombreBase + _col;
-                            edt.BorderStyle = BorderStyle.Solid;
-                            edt.BorderWidth = Unit.Pixel(1);
+                            if (this._useBorder)
+                            {
+                                edt.BorderStyle = BorderStyle.Solid;
+                                edt.BorderWidth = Unit.Pixel(1);
+                            }
+                            else
+                            {
+                                edt.BorderStyle = BorderStyle.None;
+                                edt.BorderWidth = Unit.Pixel(0);
+                            }
                             edt.Enabled = _isEnable;
-                            edt.CssClass = "text ui-widget ui-corner-all";
+                            edt.CssClass = this._useDefaultCSSClass ? "text ui-widget ui-corner-all" : "";
                             edt.Width = Unit.Pixel(_widthInPixel);
                             edt.Style["text-align"] = "right";
                             edt.Attributes.Add("colName", this._columnName);
@@ -106,8 +118,16 @@ namespace Avaruz.FrameWork.Controls.Web
 
                             DropDownList ddl = new DropDownList();
                             ddl.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "ddl" + _col : _nombreBase + _col;
-                            ddl.BorderStyle = BorderStyle.Solid;
-                            ddl.BorderWidth = Unit.Pixel(1);
+                            if (this._useBorder)
+                            {
+                                ddl.BorderStyle = BorderStyle.Solid;
+                                ddl.BorderWidth = Unit.Pixel(1);
+                            }
+                            else
+                            {
+                                ddl.BorderStyle = BorderStyle.None;
+                                ddl.BorderWidth = Unit.Pixel(0);
+                            }
                             ddl.Width = Unit.Pixel(_widthInPixel);
                             ddl.Enabled = _isEnable;
                             ddl.DataSource = DatosDdl;
@@ -115,7 +135,7 @@ namespace Avaruz.FrameWork.Controls.Web
                             ddl.DataValueField = "Value";
 
                             ddl.DataBind();
-                            ddl.CssClass = "ui-widget ui-corner-all";
+                            ddl.CssClass = this._useDefaultCSSClass ? "text ui-widget ui-corner-all" : "";
                             container.Controls.Add(ddl);
                             ddl.DataBinding += new EventHandler(ddl_DataBinding);
 
