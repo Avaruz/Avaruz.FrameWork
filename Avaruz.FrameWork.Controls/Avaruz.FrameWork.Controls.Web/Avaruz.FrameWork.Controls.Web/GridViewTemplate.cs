@@ -182,7 +182,7 @@ namespace Avaruz.FrameWork.Controls.Web
             GridViewRow container = (GridViewRow)txtdata.NamingContainer;
             object dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
-            //txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString() + "," + _columnName + ",this.value)");
+            txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString() + "," + _columnName + ",this.value)");
             if (dataValue != DBNull.Value)
                 txtdata.Text = dataValue.ToString();
         }
