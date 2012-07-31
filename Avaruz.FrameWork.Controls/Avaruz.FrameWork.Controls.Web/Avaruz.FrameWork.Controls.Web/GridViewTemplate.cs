@@ -51,7 +51,7 @@ namespace Avaruz.FrameWork.Controls.Web
 
         void ITemplate.InstantiateIn(System.Web.UI.Control container)
         {
-            Label lbl = new Label();
+            var lbl = new Label();
             switch (_templateType)
             {
                 case ListItemType.Header:
@@ -73,8 +73,13 @@ namespace Avaruz.FrameWork.Controls.Web
                     switch (_typeControl)
                     {
                         case ControlType.LabelControl:
-                            Label lblc = new Label();
-                            lblc.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "lbl" + _col : _nombreBase + _col;
+                            var lblc = new Label
+                                           {
+                                               ID =
+                                                   String.IsNullOrWhiteSpace(_nombreBase)
+                                                       ? "lbl" + _col
+                                                       : _nombreBase + _col
+                                           };
                             if (_widthInPixel > 0)
                                 lblc.Width = Unit.Pixel(_widthInPixel);
                             lblc.DataBinding += new EventHandler(lbl_DataBinding);
@@ -82,8 +87,17 @@ namespace Avaruz.FrameWork.Controls.Web
                             break;
                         case ControlType.EditControl:
 
-                            TextBox edt = new TextBox();
-                            edt.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "edt" + _col : _nombreBase + _col;
+                            var edt = new TextBox
+                                          {
+                                              ID =
+                                                  String.IsNullOrWhiteSpace(_nombreBase)
+                                                      ? "edt" + _col
+                                                      : _nombreBase + _col,
+                                              Enabled = _isEnable,
+                                              Columns = 1,
+                                              CssClass = this._useDefaultCSSClass ? "text ui-widget ui-corner-all" : "",
+                                              Width = Unit.Pixel(_widthInPixel)
+                                          };
                             if (this._useBorder)
                             {
                                 edt.BorderStyle = BorderStyle.Solid;
@@ -94,31 +108,42 @@ namespace Avaruz.FrameWork.Controls.Web
                                 edt.BorderStyle = BorderStyle.None;
                                 edt.BorderWidth = Unit.Pixel(0);
                             }
-                            edt.Enabled = _isEnable;
-                            edt.CssClass = this._useDefaultCSSClass ? "text ui-widget ui-corner-all" : "";
-                            edt.Width = Unit.Pixel(_widthInPixel);
                             edt.Style["text-align"] = "right";
                             edt.Attributes.Add("colName", this._columnName);
                             container.Controls.Add(edt);
                             edt.DataBinding += new EventHandler(edt_DataBinding);
-                            edt.Columns = 1;
+
                             break;
                         case ControlType.CheckBoxControl:
 
-                            CheckBox chb = new CheckBox();
-                            chb.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "chb" + _col : _nombreBase + _col;
+                            var chb = new CheckBox
+                                          {
+                                              ID =
+                                                  String.IsNullOrWhiteSpace(_nombreBase)
+                                                      ? "chb" + _col
+                                                      : _nombreBase + _col,
+                                              Enabled = _isEnable
+                                          };
                             chb.Attributes.Add("colName", this._columnName);
                             chb.Attributes.Add("colIndex", this._col);
-
-                            chb.Enabled = _isEnable;
                             container.Controls.Add(chb);
                             chb.DataBinding += new EventHandler(chb_DataBinding);
                             break;
 
                         case ControlType.DropDownControl:
 
-                            DropDownList ddl = new DropDownList();
-                            ddl.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "ddl" + _col : _nombreBase + _col;
+                            var ddl = new DropDownList
+                                          {
+                                              ID =
+                                                  String.IsNullOrWhiteSpace(_nombreBase)
+                                                      ? "ddl" + _col
+                                                      : _nombreBase + _col,
+                                              Width = Unit.Pixel(_widthInPixel),
+                                              Enabled = _isEnable,
+                                              DataSource = DatosDdl,
+                                              DataTextField = "Text",
+                                              DataValueField = "Value"
+                                          };
                             if (this._useBorder)
                             {
                                 ddl.BorderStyle = BorderStyle.Solid;
@@ -129,11 +154,7 @@ namespace Avaruz.FrameWork.Controls.Web
                                 ddl.BorderStyle = BorderStyle.None;
                                 ddl.BorderWidth = Unit.Pixel(0);
                             }
-                            ddl.Width = Unit.Pixel(_widthInPixel);
-                            ddl.Enabled = _isEnable;
-                            ddl.DataSource = DatosDdl;
-                            ddl.DataTextField = "Text";
-                            ddl.DataValueField = "Value";
+
 
                             ddl.DataBind();
                             ddl.CssClass = this._useDefaultCSSClass ? "text ui-widget ui-corner-all" : "";
@@ -145,20 +166,25 @@ namespace Avaruz.FrameWork.Controls.Web
 
                         case ControlType.TextAreaControl:
 
-                            TextBox eda = new TextBox();
-                            eda.ID = String.IsNullOrWhiteSpace(_nombreBase) ? "eda" + _col : _nombreBase + _col;
-                            eda.BorderStyle = BorderStyle.Solid;
-                            eda.BorderWidth = Unit.Pixel(1);
-                            eda.Enabled = _isEnable;
-                            eda.TextMode = TextBoxMode.MultiLine;
+                            var eda = new TextBox
+                                          {
+                                              ID =
+                                                  String.IsNullOrWhiteSpace(_nombreBase)
+                                                      ? "eda" + _col
+                                                      : _nombreBase + _col,
+                                              BorderStyle = BorderStyle.Solid,
+                                              BorderWidth = Unit.Pixel(1),
+                                              Enabled = _isEnable,
+                                              TextMode = TextBoxMode.MultiLine,
+                                              Height = Unit.Pixel(30),
+                                              Width = Unit.Pixel(_widthInPixel / 2),
+                                              Columns = 1
+                                          };
                             eda.Attributes.Add("maxLength", _widthInPixel.ToString(CultureInfo.InvariantCulture));
-                            eda.Height = Unit.Pixel(30);
-                            //eda.CssClass = "ui-widget ui-corner-all";
-                            eda.Width = Unit.Pixel(_widthInPixel / 2);
                             eda.Attributes.Add("colName", this._columnName);
                             container.Controls.Add(eda);
                             eda.DataBinding += new EventHandler(eda_DataBinding);
-                            eda.Columns = 1;
+
                             break;
 
 
@@ -184,7 +210,7 @@ namespace Avaruz.FrameWork.Controls.Web
             object dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
             txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString() + "," + _columnName + ",this.value)");
-            if (dataValue != DBNull.Value)
+            if (dataValue != DBNull.Value && dataValue != null)
                 txtdata.Text = dataValue.ToString();
         }
 
