@@ -69,6 +69,7 @@ namespace Avaruz.FrameWork.Controls.Web
                     break;
 
                 case ListItemType.Item:
+                case ListItemType.Footer:
                     switch (_typeControl)
                     {
                         case ControlType.LabelControl:
