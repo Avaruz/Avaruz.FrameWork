@@ -109,6 +109,7 @@ namespace Avaruz.FrameWork.Controls.Web
                                 edt.BorderWidth = Unit.Pixel(0);
                             }
                             edt.Style["text-align"] = "right";
+                            edt.Font.Bold = _templateType == ListItemType.Footer;
                             edt.Attributes.Add("colName", this._columnName);
                             container.Controls.Add(edt);
                             edt.DataBinding += new EventHandler(edt_DataBinding);
@@ -205,9 +206,9 @@ namespace Avaruz.FrameWork.Controls.Web
         // Databind an edit box in the grid
         void edt_DataBinding(object sender, EventArgs e)
         {
-            TextBox txtdata = (TextBox)sender;
-            GridViewRow container = (GridViewRow)txtdata.NamingContainer;
-            object dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            var txtdata = (TextBox)sender;
+            var container = (GridViewRow)txtdata.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
             txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString() + "," + _columnName + ",this.value)");
             if (dataValue != DBNull.Value && dataValue != null)
@@ -217,9 +218,9 @@ namespace Avaruz.FrameWork.Controls.Web
         // Databind an edit box in the grid
         void eda_DataBinding(object sender, EventArgs e)
         {
-            TextBox txtdata = (TextBox)sender;
-            GridViewRow container = (GridViewRow)txtdata.NamingContainer;
-            object dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            var txtdata = (TextBox)sender;
+            var container = (GridViewRow)txtdata.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
             int maximunLength = _widthInPixel == 0 ? 100 : _widthInPixel;
             txtdata.Attributes.Add("onkeypress", "return isMaxLength(this," + maximunLength.ToString(CultureInfo.InvariantCulture) + ");");
@@ -232,9 +233,9 @@ namespace Avaruz.FrameWork.Controls.Web
         // Databind an check box in the grid
         void chb_DataBinding(object sender, EventArgs e)
         {
-            CheckBox chbdata = (CheckBox)sender;
-            GridViewRow container = (GridViewRow)chbdata.NamingContainer;
-            object dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            var chbdata = (CheckBox)sender;
+            var container = (GridViewRow)chbdata.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
             chbdata.Attributes.Add("rowIndex", container.RowIndex.ToString(CultureInfo.InvariantCulture));
             if (dataValue != DBNull.Value)
@@ -245,9 +246,9 @@ namespace Avaruz.FrameWork.Controls.Web
         // Databind an edit box in the grid
         void ddl_DataBinding(object sender, EventArgs e)
         {
-            DropDownList ddldata = (DropDownList)sender;
-            GridViewRow container = (GridViewRow)ddldata.NamingContainer;
-            object dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            var ddldata = (DropDownList)sender;
+            var container = (GridViewRow)ddldata.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
             ddldata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString(CultureInfo.InvariantCulture) + ",'" + _columnName + "',this.value)");
             if (dataValue != DBNull.Value)
@@ -260,9 +261,9 @@ namespace Avaruz.FrameWork.Controls.Web
         // Databind a label 
         void lbl_DataBinding(object sender, EventArgs e)
         {
-            Label lbl = (Label)sender;
-            GridViewRow container = (GridViewRow)lbl.NamingContainer;
-            object dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            var lbl = (Label)sender;
+            var container = (GridViewRow)lbl.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             if (dataValue != DBNull.Value)
                 lbl.Text = dataValue.ToString();
         }
