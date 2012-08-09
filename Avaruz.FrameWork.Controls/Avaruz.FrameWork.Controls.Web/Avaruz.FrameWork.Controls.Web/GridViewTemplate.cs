@@ -58,7 +58,6 @@ namespace Avaruz.FrameWork.Controls.Web
                     container.Controls.Add(lbl);
                     lbl.Text = _columnName;
 
-
                     if (_verticalHeader)
                     {
                         lbl.Font.Size = FontUnit.Small;
@@ -110,7 +109,8 @@ namespace Avaruz.FrameWork.Controls.Web
                             }
                             edt.Style["text-align"] = "right";
                             edt.Font.Bold = _templateType == ListItemType.Footer;
-                            edt.Attributes.Add("colName", this._columnName);
+                            edt.Attributes.Add("data-colName", this._columnName);
+                            edt.Attributes.Add("data-colIndex", this._col);
                             container.Controls.Add(edt);
                             edt.DataBinding += new EventHandler(edt_DataBinding);
 
@@ -125,8 +125,8 @@ namespace Avaruz.FrameWork.Controls.Web
                                                       : _nombreBase + _col,
                                               Enabled = _isEnable
                                           };
-                            chb.Attributes.Add("colName", this._columnName);
-                            chb.Attributes.Add("colIndex", this._col);
+                            chb.Attributes.Add("data-colName", this._columnName);
+                            chb.Attributes.Add("data-colIndex", this._col);
                             container.Controls.Add(chb);
                             chb.DataBinding += new EventHandler(chb_DataBinding);
                             break;
@@ -181,8 +181,8 @@ namespace Avaruz.FrameWork.Controls.Web
                                               Width = Unit.Pixel(_widthInPixel / 2),
                                               Columns = 1
                                           };
-                            eda.Attributes.Add("maxLength", _widthInPixel.ToString(CultureInfo.InvariantCulture));
-                            eda.Attributes.Add("colName", this._columnName);
+                            eda.Attributes.Add("data-maxLength", _widthInPixel.ToString(CultureInfo.InvariantCulture));
+                            eda.Attributes.Add("data-colName", this._columnName);
                             container.Controls.Add(eda);
                             eda.DataBinding += new EventHandler(eda_DataBinding);
 
@@ -222,7 +222,7 @@ namespace Avaruz.FrameWork.Controls.Web
             var container = (GridViewRow)txtdata.NamingContainer;
             var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
-            int maximunLength = _widthInPixel == 0 ? 100 : _widthInPixel;
+            var maximunLength = _widthInPixel == 0 ? 100 : _widthInPixel;
             txtdata.Attributes.Add("onkeypress", "return isMaxLength(this," + maximunLength.ToString(CultureInfo.InvariantCulture) + ");");
             // Add JavaScript function sav(row,col,hours) which will save changes
             txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString(CultureInfo.InvariantCulture) + ",'" + _columnName + "',this.value)");
@@ -237,7 +237,7 @@ namespace Avaruz.FrameWork.Controls.Web
             var container = (GridViewRow)chbdata.NamingContainer;
             var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
-            chbdata.Attributes.Add("rowIndex", container.RowIndex.ToString(CultureInfo.InvariantCulture));
+            chbdata.Attributes.Add("data-rowIndex", container.RowIndex.ToString(CultureInfo.InvariantCulture));
             if (dataValue != DBNull.Value)
                 chbdata.Checked = Convert.ToBoolean(dataValue);
 
