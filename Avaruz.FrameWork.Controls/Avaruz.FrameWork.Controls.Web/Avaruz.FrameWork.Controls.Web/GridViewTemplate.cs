@@ -12,7 +12,8 @@ namespace Avaruz.FrameWork.Controls.Web
         EditControl = 1,
         DropDownControl = 2,
         CheckBoxControl = 3,
-        TextAreaControl = 4
+        TextAreaControl = 4,
+        RadioButtonControl = 5
 
     }
     public class GridViewTemplate : ITemplate
@@ -131,6 +132,24 @@ namespace Avaruz.FrameWork.Controls.Web
                             chb.DataBinding += new EventHandler(chb_DataBinding);
                             break;
 
+                        case ControlType.RadioButtonControl:
+
+                            var rbc = new RadioButton
+                            {
+
+                                ID =
+                                    String.IsNullOrWhiteSpace(_nombreBase)
+                                        ? "rbc" + _col
+                                        : _nombreBase + _col,
+                                Enabled = _isEnable
+                            };
+                            rbc.Attributes.Add("data-colName", this._columnName);
+                            rbc.Attributes.Add("data-colIndex", this._col);
+                            container.Controls.Add(rbc);
+                            rbc.DataBinding += new EventHandler(rdb_DataBinding);
+                            break;
+
+
                         case ControlType.DropDownControl:
 
                             var ddl = new DropDownList
@@ -210,7 +229,7 @@ namespace Avaruz.FrameWork.Controls.Web
             var container = (GridViewRow)txtdata.NamingContainer;
             var dataValue = DataBinder.Eval(container.DataItem, _columnName);
             // Add JavaScript function sav(row,col,hours) which will save changes
-            txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString() + "," + _columnName + ",this.value)");
+            txtdata.Attributes.Add("onchange", "sav(" + container.RowIndex.ToString(CultureInfo.InvariantCulture) + "," + _columnName + ",this.value)");
             if (dataValue != DBNull.Value && dataValue != null)
                 txtdata.Text = dataValue.ToString();
         }
@@ -230,7 +249,21 @@ namespace Avaruz.FrameWork.Controls.Web
                 txtdata.Text = dataValue.ToString();
         }
 
-        // Databind an check box in the grid
+        // Databind an radiobutton in the grid
+        void rdb_DataBinding(object sender, EventArgs e)
+        {
+            var rdbdata = (RadioButton)sender;
+            var container = (GridViewRow)rdbdata.NamingContainer;
+            var dataValue = DataBinder.Eval(container.DataItem, _columnName);
+            // Add JavaScript function sav(row,col,hours) which will save changes
+            rdbdata.GroupName = "GrupoFila" + container.RowIndex.ToString(CultureInfo.InvariantCulture);
+            rdbdata.Attributes.Add("data-rowIndex", container.RowIndex.ToString(CultureInfo.InvariantCulture));
+            if (dataValue != DBNull.Value)
+                rdbdata.Checked = Convert.ToBoolean(dataValue);
+
+        }
+
+        // Databin an checkbox in the grid
         void chb_DataBinding(object sender, EventArgs e)
         {
             var chbdata = (CheckBox)sender;
