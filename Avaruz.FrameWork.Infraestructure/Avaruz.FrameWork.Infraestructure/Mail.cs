@@ -15,6 +15,13 @@ namespace Avaruz.FrameWork.Infraestructure
 
         public MailAddress FromEmail { get; set; }
 
+
+        /// <summary>
+        /// Constructor donde uno puede especificar el metodo de entrega, el server y si se usan los credenciales por defecto.
+        /// </summary>
+        /// <param name="deliveryMethod"></param>
+        /// <param name="host"></param>
+        /// <param name="useDefaultCredentials"></param>
         public Mail(SmtpDeliveryMethod deliveryMethod, string host, bool useDefaultCredentials)
         {
             _smtp = new SmtpClient
@@ -30,8 +37,12 @@ namespace Avaruz.FrameWork.Infraestructure
 
         }
 
+
+        /// <summary>
+        /// Constructor que por defecto llama al PIAP011SCZ como SMTP
+        /// </summary>
         public Mail()
-            : this(SmtpDeliveryMethod.Network, "PIAP010SCZ", true)
+            : this(SmtpDeliveryMethod.Network, "PIAP011SCZ", true)
         {
 
         }
