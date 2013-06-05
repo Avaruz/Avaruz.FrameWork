@@ -311,7 +311,7 @@ Public Module WindowsTools
     ''' <param name="AssemblyName"></param>
     ''' <param name="ParentForm"></param>
     ''' <remarks></remarks>
-    Public Sub FormActivator(ByVal ClassName As String, ByVal AssemblyName As String, ByRef ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
+    Public Sub FormActivator(ByVal ClassName As String, ByVal AssemblyName As String, ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
         If Not IsFormActive(ClassName, ParentForm) Then
             Dim F As System.Windows.Forms.Form = WindowsTools.GetForm(AssemblyName, ClassName, rutaAssembly)
             F.MdiParent = ParentForm
@@ -329,7 +329,7 @@ Public Module WindowsTools
     ''' <param name="ClassName"></param>
     ''' <param name="AssemblyName"></param>
     ''' <remarks></remarks>
-    Public Sub DialogActivator(ByVal ClassName As String, ByVal AssemblyName As String, ByRef ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
+    Public Sub DialogActivator(ByVal ClassName As String, ByVal AssemblyName As String, ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
         Dim F As System.Windows.Forms.Form = WindowsTools.GetForm(AssemblyName, ClassName, rutaAssembly)
         F.StartPosition = FormStartPosition.CenterParent
 
@@ -339,12 +339,21 @@ Public Module WindowsTools
         F.ShowDialog(ParentForm)
 
     End Sub
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="assemblyName"></param>
+    ''' <param name="className"></param>
+    ''' <param name="rutaAssembly"></param>
+    ''' <param name="EsDll"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Private Function GetForm(assemblyName As String, className As String, rutaAssembly As String, Optional ByVal EsDll As Boolean = False) As Form
         Dim F As System.Windows.Forms.Form
         Dim extension As String = IIf(EsDll, ".dll", ".exe")
         Dim FullPath As String = rutaAssembly + assemblyName + extension
         Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.LoadFile(FullPath)
-        Dim FullClassName As String = assemblyName + "." + className
+        Dim FullClassName As String = String.Format("{0}.{1}", assemblyName, className)
         Dim formObject As System.Type = asm.GetType(FullClassName)
         Dim formActivator As Object = Activator.CreateInstance(formObject)
         F = CType(formActivator, Form)
@@ -374,7 +383,7 @@ Public Module WindowsTools
 
     Public Function FormLister(ByVal AssemblyName As String, rutaAssembly As String) As List(Of String)
         Dim ListadeForms As New List(Of String)
-        Dim FullPath As String = rutaAssembly + AssemblyName + ".dll"
+        Dim FullPath As String = String.Format("{0}{1}.dll", rutaAssembly, AssemblyName)
         Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.LoadFile(FullPath)
 
         For Each tipo As Type In asm.GetTypes
