@@ -64,6 +64,10 @@
     <Compile Include="InfoPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs" />
     <Compile Include="PageCollection.cs" />
     <Compile Include="PageEventHandler.cs" />
     <Compile Include="PaneCaption.cs">
@@ -98,6 +102,7 @@
       <DependentUpon>InfoPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx" />
     <EmbeddedResource Include="PaneCaption.resx">
       <DependentUpon>PaneCaption.cs</DependentUpon>
       <SubType>Designer</SubType>
