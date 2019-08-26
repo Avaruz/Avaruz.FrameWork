@@ -12,6 +12,8 @@ namespace Avaruz.FrameWork.Infraestructure
         public MailAddressCollection ToRecipients;
 
         public MailAddressCollection CCRecipients;
+        
+        public AttachmentCollection Attachments;
 
         public MailAddress FromEmail { get; set; }
 

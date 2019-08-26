@@ -1,9 +1,18 @@
 ﻿Imports System.Windows.Forms
 Imports System.IO
 Imports System.Text
-
+Imports System.Runtime.CompilerServices
 
 Public Module WindowsTools
+    Private separator As String
+    Public Property SeparadorDeListas() As String
+        Get
+            Return separator
+        End Get
+        Set(ByVal value As String)
+            separator = value
+        End Set
+    End Property
     Sub MostrarMensajeInformativo(ByVal Mensaje As String, Optional ByVal Titulo As String = "")
         Titulo = IIf(Titulo = "", My.Application.Info.ProductName, Titulo)
         MessageBox.Show(Mensaje, Titulo, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -12,31 +21,31 @@ Public Module WindowsTools
     Function MostrarMensajeSiNo(ByVal Mensaje As String, Optional ByVal Titulo As String = "") As DialogResult
         Titulo = IIf(Titulo = "", My.Application.Info.ProductName, Titulo)
         Return _
-            MessageBox.Show(Mensaje, My.Application.Info.ProductName, MessageBoxButtons.YesNo, _
+            MessageBox.Show(Mensaje, My.Application.Info.ProductName, MessageBoxButtons.YesNo,
                              MessageBoxIcon.Question)
     End Function
 
     Sub MostrarMensajeError(ByVal Mensaje As String)
         MessageBox.Show(Mensaje, My.Application.Info.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
-    Sub FormatearColumnaTexto(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String, _
-                      ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False, _
+    Sub FormatearColumnaTexto(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String,
+                      ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False,
                       Optional ByVal SoloLectura As Boolean = False)
 
 
         Dim Formato As String = ""
         FormatearColumna(Columna, TextoCabecera, Indice, Formato, DataGridViewContentAlignment.TopLeft, Congelada, SoloLectura)
     End Sub
-    Sub FormatearColumna2Decimal(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String, _
-                          ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False, _
+    Sub FormatearColumna2Decimal(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String,
+                          ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False,
                           Optional ByVal SoloLectura As Boolean = False)
 
 
         Dim Formato As String = "#,##0.00"
         FormatearColumna(Columna, TextoCabecera, Indice, Formato, DataGridViewContentAlignment.TopRight, Congelada, SoloLectura)
     End Sub
-    Sub FormatearColumnaEntero(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String, _
-                      ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False, _
+    Sub FormatearColumnaEntero(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String,
+                      ByVal Indice As Integer, Optional ByVal Congelada As Boolean = False,
                       Optional ByVal SoloLectura As Boolean = False)
 
 
@@ -52,10 +61,10 @@ Public Module WindowsTools
     ''' <param name="Formato"></param>
     ''' <param name="Alineacion"></param>
     ''' <remarks></remarks>
-    Sub FormatearColumna(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String, _
-                          ByVal Indice As Integer, ByVal Formato As String, _
-                          Optional ByVal Alineacion As DataGridViewContentAlignment = _
-                             DataGridViewContentAlignment.NotSet, Optional ByVal Congelada As Boolean = False, _
+    Sub FormatearColumna(ByRef Columna As DataGridViewColumn, ByVal TextoCabecera As String,
+                          ByVal Indice As Integer, ByVal Formato As String,
+                          Optional ByVal Alineacion As DataGridViewContentAlignment =
+                             DataGridViewContentAlignment.NotSet, Optional ByVal Congelada As Boolean = False,
                           Optional ByVal SoloLectura As Boolean = False)
         With Columna
             If TextoCabecera <> "" Then
@@ -70,11 +79,11 @@ Public Module WindowsTools
 
     End Sub
 
-    Public Sub AnexarDataGridCombo(Of T)(ByRef ListaDesplegable As DataGridViewComboBoxColumn, _
-                                           ByVal MiembroVisible As String, ByVal MiembroValor As String, _
-                                           ByVal NombrePropiedad As String, ByVal TextoCabecera As String, _
-                                           ByVal FuenteDatos As List(Of T), _
-                                           Optional ByVal SoloLectura As Boolean = False, _
+    Public Sub AnexarDataGridCombo(Of T)(ByRef ListaDesplegable As DataGridViewComboBoxColumn,
+                                           ByVal MiembroVisible As String, ByVal MiembroValor As String,
+                                           ByVal NombrePropiedad As String, ByVal TextoCabecera As String,
+                                           ByVal FuenteDatos As List(Of T),
+                                           Optional ByVal SoloLectura As Boolean = False,
                                            Optional ByVal Estilo As FlatStyle = FlatStyle.Flat)
         With ListaDesplegable
             If NombrePropiedad <> String.Empty Then
@@ -92,8 +101,68 @@ Public Module WindowsTools
             .DataSource = FuenteDatos
         End With
     End Sub
+    <Extension()>
+    Public Sub AnexarFuente(Of T)(ByVal ListaDesplegable As ListBox, ByVal MiembroVisible As String,
+                                   ByVal MiembroValor As String, ByVal FuenteDatos As List(Of T))
+        With ListaDesplegable
+            .DisplayMember = MiembroVisible
+            .ValueMember = MiembroValor
+            .DataSource = FuenteDatos
+        End With
 
-    Public Sub AnexarCombo(Of T)(ByRef ListaDesplegable As ComboBox, ByVal MiembroVisible As String, _
+    End Sub
+
+    <Extension()>
+    Public Sub AnexarFuente(Of T)(ByVal ListaDesplegable As CheckedListBox, ByVal MiembroVisible As String,
+                                   ByVal MiembroValor As String, ByVal FuenteDatos As List(Of T))
+        With ListaDesplegable
+            .DisplayMember = MiembroVisible
+            .ValueMember = MiembroValor
+            .DataSource = FuenteDatos
+        End With
+
+    End Sub
+    <Extension()>
+    Public Sub AnexarFuente(Of T)(ByRef ListaDesplegable As ComboBox, ByVal MiembroVisible As String,
+                                   ByVal MiembroValor As String, ByVal FuenteDatos As List(Of T))
+        With ListaDesplegable
+            .DisplayMember = MiembroVisible
+            .ValueMember = MiembroValor
+            .DataSource = FuenteDatos
+        End With
+    End Sub
+    <Extension()>
+    Public Sub AnexarFuente(Of T)(ByRef ListaDesplegable As DataGridViewComboBoxColumn,
+                                           ByVal MiembroVisible As String, ByVal MiembroValor As String,
+                                           ByVal NombrePropiedad As String, ByVal TextoCabecera As String,
+                                           ByVal FuenteDatos As List(Of T),
+                                           Optional ByVal SoloLectura As Boolean = False,
+                                           Optional ByVal Estilo As FlatStyle = FlatStyle.Flat)
+        With ListaDesplegable
+            If NombrePropiedad <> String.Empty Then
+                .DataPropertyName = NombrePropiedad
+            End If
+            .FlatStyle = Estilo
+            .HeaderText = TextoCabecera
+            If MiembroValor <> String.Empty Then
+                .DisplayMember = MiembroVisible
+            End If
+            If MiembroValor <> String.Empty Then
+                .ValueMember = MiembroValor
+            End If
+            .ReadOnly = SoloLectura
+            .DataSource = FuenteDatos
+        End With
+    End Sub
+    Public Sub AnexarCombo(Of T)(ByRef ListaDesplegable As ComboBox, ByVal MiembroVisible As String,
+                                   ByVal MiembroValor As String, ByVal FuenteDatos As List(Of T))
+        With ListaDesplegable
+            .DisplayMember = MiembroVisible
+            .ValueMember = MiembroValor
+            .DataSource = FuenteDatos
+        End With
+    End Sub
+    Public Sub AnexarList(Of T)(ByRef ListaDesplegable As ListBox, ByVal MiembroVisible As String,
                                    ByVal MiembroValor As String, ByVal FuenteDatos As List(Of T))
         With ListaDesplegable
             .DisplayMember = MiembroVisible
@@ -102,8 +171,8 @@ Public Module WindowsTools
         End With
     End Sub
 
-    Public Sub ExportDGVToCSV(ByVal DataGridView As DataGridView, Optional ByVal Titulo As String = "", _
-                               Optional ByVal blnWriteColumnHeaderNames As Boolean = True, _
+    Public Sub ExportDGVToCSV(ByVal DataGridView As DataGridView, Optional ByVal Titulo As String = "",
+                               Optional ByVal blnWriteColumnHeaderNames As Boolean = True,
                                Optional ByVal strDelimiterType As String = ",")
 
         Dim strExportFileName As String
@@ -115,6 +184,7 @@ Public Module WindowsTools
             oSaveFileDialog.DefaultExt = "csv"
             oSaveFileDialog.FileName = Titulo
             oSaveFileDialog.Filter = "Archivos CSV (*.csv)|*.csv"
+            separator = If(String.IsNullOrEmpty(separator), System.Globalization.CultureInfo.CurrentCulture.TextInfo.ListSeparator, separator)
 
             If oSaveFileDialog.ShowDialog() = DialogResult.OK Then
                 strExportFileName = oSaveFileDialog.FileName
@@ -122,7 +192,7 @@ Public Module WindowsTools
                 Dim sr As StreamWriter
                 Try
 
-                    sr = New StreamWriter(strExportFileName, False)
+                    sr = New StreamWriter(strExportFileName, False, Encoding.UTF8)
                 Catch ex As IOException
                     Throw _
                         New Exception(strExportFileName & " el archivo que Ud. esta tratando de usar esta en uso")
@@ -139,7 +209,7 @@ Public Module WindowsTools
                 If blnWriteColumnHeaderNames Then
 
                     For intX As Integer = 0 To intColumnCount
-                        strRowData += Replace(DataGridView.Columns(intX).HeaderText, strDelimiter, "") & _
+                        strRowData += Replace(DataGridView.Columns(intX).HeaderText, strDelimiter, "") &
                                       IIf(intX < intColumnCount, strDelimiter, "")
 
                     Next intX
@@ -153,8 +223,8 @@ Public Module WindowsTools
                 For intX As Integer = 0 To DataGridView.Rows.Count - 1
                     strRowData = ""
                     For intRowData As Integer = 0 To intColumnCount
-                        strRowData += _
-                            Replace(DataGridView.Rows(intX).Cells(intRowData).FormattedValue, strDelimiter, "") & _
+                        strRowData +=
+                            Replace(DataGridView.Rows(intX).Cells(intRowData).FormattedValue, strDelimiter, "") &
                             IIf(intRowData < intColumnCount, strDelimiter, "")
 
                     Next intRowData
@@ -182,6 +252,7 @@ Public Module WindowsTools
         Dim Filename As String
         Dim headerList As New SortedDictionary(Of Integer, String)
         Dim columnsList As New SortedDictionary(Of Integer, String)
+
 
 
         Using oSaveFileDialog As New SaveFileDialog()
@@ -216,7 +287,7 @@ Public Module WindowsTools
                     i = i + 1
 
                     If i < headerList.Count Then
-                        sWriter.Write(",")
+                        sWriter.Write(separator)
                     End If
                 Next
 
@@ -235,7 +306,7 @@ Public Module WindowsTools
                                             sValue = CType(row.Cells(col.Index).Value, String)
                                         End If
                                         If sValue <> String.Empty Then
-                                            sValue = sValue.Replace(",", " ")
+                                            sValue = sValue.Replace(separator, " ")
                                             'lose the commas
                                         End If
 
@@ -246,7 +317,7 @@ Public Module WindowsTools
                                 End Select
                             End If
                             'row.Cells(col.Index).Value i snothing
-                            If col.Index < dgv.Columns.Count Then sWriter.Write(",")
+                            If col.Index < dgv.Columns.Count Then sWriter.Write(separator)
                         Catch ex As Exception
                             Throw New Exception("Something went wrong Exporting DatagridView")
                         End Try
@@ -311,15 +382,18 @@ Public Module WindowsTools
     ''' <param name="AssemblyName"></param>
     ''' <param name="ParentForm"></param>
     ''' <remarks></remarks>
-    Public Sub FormActivator(ByVal ClassName As String, ByVal AssemblyName As String, ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
+    Public Sub FormActivator(Of T As Form)(ByVal ClassName As String, ByVal AssemblyName As String, ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
         If Not IsFormActive(ClassName, ParentForm) Then
-            Dim F As System.Windows.Forms.Form = WindowsTools.GetForm(AssemblyName, ClassName, rutaAssembly)
-            F.MdiParent = ParentForm
-            F.StartPosition = FormStartPosition.CenterScreen
-            F.MaximizeBox = True
-            F.ShowInTaskbar = False
-            F.FormBorderStyle = FormBorderStyle.Sizable
-            F.Show()
+            Dim F As T = WindowsTools.GetForm(Of T)(AssemblyName, ClassName, rutaAssembly)
+            If TypeOf (F) Is Form Then
+                With F
+                    .MdiParent = ParentForm
+                    .StartPosition = FormStartPosition.CenterScreen
+                    .MaximizeBox = True
+                    .ShowInTaskbar = False
+                    .Show()
+                End With
+            End If
         End If
     End Sub
 
@@ -330,7 +404,7 @@ Public Module WindowsTools
     ''' <param name="AssemblyName"></param>
     ''' <remarks></remarks>
     Public Sub DialogActivator(ByVal ClassName As String, ByVal AssemblyName As String, ParentForm As System.Windows.Forms.Form, ByVal rutaAssembly As String)
-        Dim F As System.Windows.Forms.Form = WindowsTools.GetForm(AssemblyName, ClassName, rutaAssembly)
+        Dim F As System.Windows.Forms.Form = WindowsTools.GetForm(Of Form)(AssemblyName, ClassName, rutaAssembly)
         F.StartPosition = FormStartPosition.CenterParent
 
         F.MaximizeBox = False
@@ -348,38 +422,19 @@ Public Module WindowsTools
     ''' <param name="EsDll"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Private Function GetForm(assemblyName As String, className As String, rutaAssembly As String, Optional ByVal EsDll As Boolean = False) As Form
-        Dim F As System.Windows.Forms.Form
+    Private Function GetForm(Of T)(assemblyName As String, className As String, rutaAssembly As String, Optional ByVal EsDll As Boolean = False) As T
+        Dim F As T
         Dim extension As String = IIf(EsDll, ".dll", ".exe")
         Dim FullPath As String = rutaAssembly + assemblyName + extension
         Dim asm As System.Reflection.Assembly = System.Reflection.Assembly.LoadFile(FullPath)
         Dim FullClassName As String = String.Format("{0}.{1}", assemblyName, className)
         Dim formObject As System.Type = asm.GetType(FullClassName)
         Dim formActivator As Object = Activator.CreateInstance(formObject)
-        F = CType(formActivator, Form)
+        F = CType(formActivator, T)
 
         Return F
     End Function
 
-
-    ''' <summary>
-    ''' Busca y activa un cuadro de dialogo
-    ''' </summary>
-    ''' <param name="ClassName"></param>
-    ''' <param name="AssemblyName"></param>
-    ''' <remarks></remarks>
-    Public Function DialogActivator(ByVal ClassName As String, ByVal AssemblyName As String, RutaAssembly As String) As Form
-
-        Dim F As Form = GetForm(AssemblyName, ClassName, RutaAssembly)
-
-        F.StartPosition = FormStartPosition.CenterParent
-
-        F.MaximizeBox = False
-        F.ShowInTaskbar = False
-        F.FormBorderStyle = FormBorderStyle.FixedDialog
-        Return F
-
-    End Function
 
     Public Function FormLister(ByVal AssemblyName As String, rutaAssembly As String) As List(Of String)
         Dim ListadeForms As New List(Of String)
