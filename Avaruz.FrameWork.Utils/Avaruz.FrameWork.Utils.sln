@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{93030756-2C8D-46A4-9584-D783326C6F93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{93030756-2C8D-46A4-9584-D783326C6F93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaruz.FrameWork.Controls.Win", "Avaruz.FrameWork.Controls.Win\Avaruz.FrameWork.Controls.Win.csproj", "{24A03D61-A902-4847-9714-A2C1F633EA5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avaruz.FrameWork.Controls.Win", "Avaruz.FrameWork.Controls.Win\Avaruz.FrameWork.Controls.Win.csproj", "{24A03D61-A902-4847-9714-A2C1F633EA5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

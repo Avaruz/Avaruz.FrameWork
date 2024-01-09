@@ -1,122 +1,110 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{24A03D61-A902-4847-9714-A2C1F633EA5F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Avaruz.FrameWork.Controls.Win</RootNamespace>
-    <AssemblyName>Avaruz.FrameWork.Controls.Win</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkProfile />
+    <TargetFramework>net8.0</TargetFramework>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
+    <AssemblyTitle>Avaruz.FrameWork.Controls.Win</AssemblyTitle>
+    <Company>Avaruz</Company>
+    <Product>Avaruz.FrameWork.Controls.Win</Product>
+    <Description>Avaruz.FrameWork.Controls.Win</Description>
+    <Copyright>Copyright 2020</Copyright>
+    <Deterministic>false</Deterministic>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <Authors>Avaruz</Authors>
+    <PackageIconUrl>http://icon_url_here_or_delete_this_line/</PackageIconUrl>
+    <PackageProjectUrl>http://project_url_here_or_delete_this_line/</PackageProjectUrl>
+    <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
+    <PackageTags>Tag1 Tag2</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <DocumentationFile>bin\Release\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\$(Configuration)\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DataGridViewMaskedTextCell.cs" />
-    <Compile Include="DataGridViewMaskedTextColumn.cs" />
-    <Compile Include="DataGridViewMaskedTextControl.cs">
+    <Compile Update="DataGridViewMaskedTextControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Header.cs">
+    <Compile Update="Header.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HeaderDesigner.cs" />
-    <Compile Include="InfoContainer.cs">
+    <Compile Update="InfoContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InfoContainerDesigner.cs" />
-    <Compile Include="InfoPage.cs">
+    <Compile Update="InfoPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InputBox.cs">
+    <Compile Update="InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InputBox.Designer.cs" />
-    <Compile Include="PageCollection.cs" />
-    <Compile Include="PageEventHandler.cs" />
-    <Compile Include="PaneCaption.cs">
+    <Compile Update="PaneCaption.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PaneCaption.designer.cs">
+    <Compile Update="PaneCaption.designer.cs">
       <DependentUpon>PaneCaption.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintDV.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReferencedDescriptionAttribute.cs" />
-    <Compile Include="Wizard.cs">
+    <Compile Update="Wizard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WizardDesigner.cs" />
-    <Compile Include="WizardPage.cs">
+    <Compile Update="WizardPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WizardPageDesigner.cs" />
-    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Header.resx">
+    <EmbeddedResource Update="Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoContainer.resx">
+    <EmbeddedResource Update="InfoContainer.resx">
       <DependentUpon>InfoContainer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoPage.resx">
+    <EmbeddedResource Update="InfoPage.resx">
       <DependentUpon>InfoPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputBox.resx" />
-    <EmbeddedResource Include="PaneCaption.resx">
+    <EmbeddedResource Update="PaneCaption.resx">
       <DependentUpon>PaneCaption.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizard.resx">
+    <EmbeddedResource Update="Wizard.resx">
       <DependentUpon>Wizard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="WizardPage.resx">
+    <EmbeddedResource Update="WizardPage.resx">
       <DependentUpon>WizardPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="InfoPageDesigner.cs" />
+    <Compile Remove="Backup\Header.cs" />
+    <Compile Remove="Backup\HeaderDesigner.cs" />
+    <Compile Remove="Backup\InfoContainer.cs" />
+    <Compile Remove="Backup\InfoContainerDesigner.cs" />
+    <Compile Remove="Backup\InfoPage.cs" />
+    <Compile Remove="Backup\PageCollection.cs" />
+    <Compile Remove="Backup\PageEventHandler.cs" />
+    <Compile Remove="Backup\PaneCaption.cs" />
+    <Compile Remove="Backup\PaneCaption.designer.cs" />
+    <Compile Remove="Backup\PrintDG.cs" />
+    <Compile Remove="Backup\PrintDV.cs" />
+    <Compile Remove="Backup\Wizard.cs" />
+    <Compile Remove="Backup\WizardDesigner.cs" />
+    <Compile Remove="Backup\WizardPage.cs" />
+    <Compile Remove="Backup\WizardPageDesigner.cs" />
+    <Compile Remove="Backup\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.5" />
+  </ItemGroup>
 </Project>
