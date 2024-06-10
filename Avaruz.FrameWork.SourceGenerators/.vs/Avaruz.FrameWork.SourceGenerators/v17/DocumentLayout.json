@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\autonotifygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|solutionrelative:autonotifygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\avaruz.framework.sourcegenerators.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|solutionrelative:avaruz.framework.sourcegenerators.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1551104902:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1701725392:0:{683b7fa4-6a84-40c1-a43b-1803dc159f14}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1701725392:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1580220020:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Avaruz.FrameWork.SourceGenerators",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeDocumentMoniker": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeToolTip": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-10T15:04:18.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AutoNotifyGenerator.cs",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
+              "RelativeDocumentMoniker": "AutoNotifyGenerator.cs",
+              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
+              "RelativeToolTip": "AutoNotifyGenerator.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T20:41:41.948Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1416,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

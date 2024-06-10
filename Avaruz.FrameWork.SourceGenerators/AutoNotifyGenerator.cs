@@ -1,23 +1,13 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using System.Linq;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Text;
-using Microsoft.CodeAnalysis.Editing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Globalization;
 
 namespace Avaruz.Framework.SourceGenerators
 {
   [Generator]
-  public class NotifyPropertyChangedGenerator : ISourceGenerator
+  public class NotifyPropertyChangedGenerator : IIncrementalGenerator
   {
-    public void Initialize(GeneratorInitializationContext context)
-    {
-      // No es necesario realizar ninguna inicialización especial.
-    }
-
     public void Execute(GeneratorExecutionContext context)
     {
       // Recopila la información de las clases y propiedades en el proyecto.
@@ -70,8 +60,8 @@ namespace Avaruz.Framework.SourceGenerators
                     public partial class {className}:INotifyPropertyChanged
                     {{
                         {string.Join("\n", propertyChangeCode)}
-                        
-                        public event PropertyChangedEventHandler PropertyChanged;
+
+                        public event PropertyChangedEventHandler? PropertyChanged;
                         private void OnPropertyChanged(string propertyName)
                         {{
                             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -88,6 +78,11 @@ namespace Avaruz.Framework.SourceGenerators
       {
         return word[0].ToString().ToLower() + word.Substring(1);
       }
+    }
+
+    public void Initialize(IncrementalGeneratorInitializationContext context)
+    {
+
     }
   }
 }

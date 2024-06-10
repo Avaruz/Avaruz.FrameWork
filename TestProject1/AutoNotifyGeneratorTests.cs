@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.ComponentModel;
 
 namespace Avaruz.Framework.SourceGenerators.Tests
@@ -39,7 +38,7 @@ namespace Avaruz.Framework.SourceGenerators.Tests
         }
       }
 
-      public event PropertyChangedEventHandler PropertyChanged;
+      public event PropertyChangedEventHandler? PropertyChanged;
       private void OnPropertyChanged(string propertyName)
       {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
