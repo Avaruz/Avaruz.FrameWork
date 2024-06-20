@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avaruz.FrameWork.SourceGenerators", "Avaruz.FrameWork.SourceGenerators.csproj", "{DB50B987-CEE3-47E2-9649-70050AA49886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceGenerator", "..\SourceGenerator\SourceGenerator.csproj", "{A452EBCE-986E-4FEE-99C3-8E25999FE29C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A452EBCE-986E-4FEE-99C3-8E25999FE29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A452EBCE-986E-4FEE-99C3-8E25999FE29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A452EBCE-986E-4FEE-99C3-8E25999FE29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A452EBCE-986E-4FEE-99C3-8E25999FE29C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

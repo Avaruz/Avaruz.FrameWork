@@ -8,7 +8,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace Avaruz.Framework.SourceGenerators
 {
   [Generator]
-  public class NotifyPropertyChangedGenerator : IIncrementalGenerator
+  public class AutoNotifyPropertyChangedGenerator : IIncrementalGenerator
   {
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
