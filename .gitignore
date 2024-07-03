@@ -28,3 +28,6 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
+/Avaruz.FrameWork.SourceGenerators/.vs/Avaruz.FrameWork.SourceGenerators/DesignTimeBuild/.dtbcache.v2
+/Avaruz.FrameWork.SourceGenerators/.vs/Avaruz.FrameWork.SourceGenerators/FileContentIndex/9b70fe0f-ffc7-4e33-98ef-4b7926709305.vsidx
+/Avaruz.FrameWork.SourceGenerators/.vs/Avaruz.FrameWork.SourceGenerators/v17/DocumentLayout.json
