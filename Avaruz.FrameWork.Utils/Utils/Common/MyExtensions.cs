@@ -11,10 +11,9 @@ namespace Avaruz.FrameWork.Utils.Common
 
         public static string Googlelizer(this string cadenaOriginal)
         {
-            var googlelizeString = "";
             //Primero partir la cadena
 
-            googlelizeString =
+            string googlelizeString =
                 cadenaOriginal.Replace("S", "[0]")
                               .Replace("Z", "[1]")
                               .Replace("C", "[2]")
@@ -47,40 +46,23 @@ namespace Avaruz.FrameWork.Utils.Common
 
         public static DateTime ToDefaultDate(this string strfecha)
         {
-            var fecha = strfecha == "" ? DateTime.Parse("01/01/0001") : DateTime.Parse(strfecha);
-            return fecha;
+            return strfecha == "" ? DateTime.Parse("01/01/0001") : DateTime.Parse(strfecha);
         }
 
         public static DateTime? ToNullDate(this DateTime fechaOriginal)
         {
-            var fecha = fechaOriginal == DateTime.MinValue ? new DateTime?() : fechaOriginal;
-            return fecha;
+            return fechaOriginal == DateTime.MinValue ? new DateTime?() : fechaOriginal;
         }
 
         public static string TrimIfNeed(this string cadena, int maxLenght)
         {
             var cadenaLength = cadena.Length;
-            var nuevaCadena = cadenaLength > maxLenght ? cadena.Substring(0, maxLenght) : cadena.Trim();
-            return nuevaCadena;
+            return cadenaLength > maxLenght ? cadena.Substring(0, maxLenght) : cadena.Trim();
         }
 
         public static string ToNoDefaultDate(this DateTime fecha)
         {
-            var strfecha = fecha.ToShortDateString() == "01/01/0001" ? "" : fecha.ToShortDateString();
-            return strfecha;
-        }
-
-        /// <returns>converted DateTime in string format</returns>
-        private static DateTime ConvertTimestamp(double timestamp)
-        {
-            //create a new DateTime value based on the Unix Epoch
-            var converted = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-
-            //add the timestamp to the value
-            var newDateTime = converted.AddSeconds(timestamp);
-
-            //return the value in string format
-            return newDateTime.ToLocalTime();
+            return fecha.ToShortDateString() == "01/01/0001" ? "" : fecha.ToShortDateString();
         }
 
         /// <summary>
@@ -94,10 +76,12 @@ namespace Avaruz.FrameWork.Utils.Common
             {
                 foreach (var pT in T.GetType().GetProperties())
                 {
-                    if (pT.Name != pS.Name) continue;
-                    (pT.GetSetMethod()).Invoke(T, new object[] { pS.GetGetMethod().Invoke(S, null) });
+                    if (pT.Name != pS.Name)
+                    {
+                        continue;
+                    } (pT.GetSetMethod()).Invoke(T, new object[] { pS.GetGetMethod().Invoke(S, null) });
                 }
-            };
+            }
         }
 
         public static string ToSiNo(this bool valor)

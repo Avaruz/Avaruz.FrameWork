@@ -7,31 +7,8 @@ namespace Avaruz.FrameWork.Utils.Reflection
 
     public static class ReflectionUtilities
     {
-        private static string _rutaEnsanblado;
-        public static string RutaEnsamblado
-        {
-            get
-            {
-                return _rutaEnsanblado;
-            }
-            set
-            {
-                _rutaEnsanblado = value;
-            }
-        }
-
-        private static string _nombreEnsamblado;
-        public static string NombreEnsamblado
-        {
-            get
-            {
-                return _nombreEnsamblado;
-            }
-            set
-            {
-                _nombreEnsamblado = value;
-            }
-        }
+        public static string RutaEnsamblado { get; set; }
+        public static string NombreEnsamblado { get; set; }
 
 
 
@@ -74,9 +51,6 @@ namespace Avaruz.FrameWork.Utils.Reflection
             Assembly ensanbladoDb = Assembly.LoadFile(getNombreCompletoEnsamblado());
             var nombreCompletoClase = ReflectionUtilities.NombreEnsamblado + "." + nombreClase + "Db";
             Type claseDb = ensanbladoDb.GetType(nombreCompletoClase);
-
-            ensanbladoDb = null;
-
             return claseDb;
         }
         /// <summary>

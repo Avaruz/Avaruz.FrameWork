@@ -1,110 +1,106 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <TargetFramework>net8.0</TargetFramework>
-    <FileUpgradeFlags />
-    <UpgradeBackupLocation />
-    <AssemblyTitle>Avaruz.FrameWork.Controls.Win</AssemblyTitle>
-    <Company>Avaruz</Company>
-    <Product>Avaruz.FrameWork.Controls.Win</Product>
-    <Description>Avaruz.FrameWork.Controls.Win</Description>
-    <Copyright>Copyright 2020</Copyright>
-    <Deterministic>false</Deterministic>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Authors>Avaruz</Authors>
-    <PackageIconUrl>http://icon_url_here_or_delete_this_line/</PackageIconUrl>
-    <PackageProjectUrl>http://project_url_here_or_delete_this_line/</PackageProjectUrl>
-    <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
-    <PackageTags>Tag1 Tag2</PackageTags>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <PlatformTarget>x86</PlatformTarget>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <DocumentationFile>bin\$(Configuration)\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="DataGridViewMaskedTextControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="Header.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="InfoContainer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="InfoPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="InputBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PaneCaption.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="PaneCaption.designer.cs">
-      <DependentUpon>PaneCaption.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Wizard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="WizardPage.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Header.resx">
-      <DependentUpon>Header.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="InfoContainer.resx">
-      <DependentUpon>InfoContainer.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="InfoPage.resx">
-      <DependentUpon>InfoPage.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="PaneCaption.resx">
-      <DependentUpon>PaneCaption.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Wizard.resx">
-      <DependentUpon>Wizard.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="WizardPage.resx">
-      <DependentUpon>WizardPage.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="InfoPageDesigner.cs" />
-    <Compile Remove="Backup\Header.cs" />
-    <Compile Remove="Backup\HeaderDesigner.cs" />
-    <Compile Remove="Backup\InfoContainer.cs" />
-    <Compile Remove="Backup\InfoContainerDesigner.cs" />
-    <Compile Remove="Backup\InfoPage.cs" />
-    <Compile Remove="Backup\PageCollection.cs" />
-    <Compile Remove="Backup\PageEventHandler.cs" />
-    <Compile Remove="Backup\PaneCaption.cs" />
-    <Compile Remove="Backup\PaneCaption.designer.cs" />
-    <Compile Remove="Backup\PrintDG.cs" />
-    <Compile Remove="Backup\PrintDV.cs" />
-    <Compile Remove="Backup\Wizard.cs" />
-    <Compile Remove="Backup\WizardDesigner.cs" />
-    <Compile Remove="Backup\WizardPage.cs" />
-    <Compile Remove="Backup\WizardPageDesigner.cs" />
-    <Compile Remove="Backup\Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.5" />
-  </ItemGroup>
+	<PropertyGroup>
+		<ProductVersion>8.0.50727</ProductVersion>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<FileUpgradeFlags />
+		<UpgradeBackupLocation />
+		<AssemblyTitle>Avaruz.FrameWork.Controls.Win</AssemblyTitle>
+		<Company>Avaruz</Company>
+		<Product>Avaruz.FrameWork.Controls.Win</Product>
+		<Description>Avaruz.FrameWork.Controls.Win</Description>
+		<Copyright>Copyright 2025</Copyright>
+		<Deterministic>false</Deterministic>
+		<Version>1.0.5</Version>
+		<AssemblyVersion>1.0.5</AssemblyVersion>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<Authors>Avaruz</Authors>
+		<PackageIconUrl>http://icon_url_here_or_delete_this_line/</PackageIconUrl>
+		<PackageProjectUrl>http://project_url_here_or_delete_this_line/</PackageProjectUrl>
+		<PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
+		<PackageTags>Tag1 Tag2</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>full</DebugType>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>none</DebugType>
+		<UseVSHostingProcess>false</UseVSHostingProcess>
+		<PlatformTarget>x86</PlatformTarget>
+		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+		<DocumentationFile>bin\$(Configuration)\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\..\..\Libs\MvcReportViewer\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\..\Libs\MvcReportViewer\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="DataGridViewMaskedTextControl.cs">
+			<SubType>Component</SubType>
+		</Compile>
+		<Compile Update="Wizard\Header.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Wizard\InfoContainer.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Wizard\InfoPage.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="InputBox.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="PaneCaption.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="PaneCaption.designer.cs">
+			<DependentUpon>PaneCaption.cs</DependentUpon>
+		</Compile>
+		<Compile Update="Wizard\Wizard.cs">
+			<SubType>UserControl</SubType>
+		</Compile>
+		<Compile Update="Wizard\WizardPage.cs">
+			<SubType>Component</SubType>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="Wizard\Header.resx">
+			<DependentUpon>Header.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Wizard\InfoContainer.resx">
+			<DependentUpon>InfoContainer.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Wizard\InfoPage.resx">
+			<DependentUpon>InfoPage.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="PaneCaption.resx">
+			<DependentUpon>PaneCaption.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Wizard\Wizard.resx">
+			<DependentUpon>Wizard.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Wizard\WizardPage.resx">
+			<DependentUpon>WizardPage.cs</DependentUpon>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.8" />
+		<PackageReference Include="System.Resources.Extensions" Version="9.0.8" />
+	</ItemGroup>
 </Project>

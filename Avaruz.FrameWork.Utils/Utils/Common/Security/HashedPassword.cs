@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -19,39 +17,51 @@ namespace Avaruz.FrameWork.Utils.Common.Security
         /// <returns></returns>
         public static bool VerifyPassword(string suppliedPassword, string passwordHash, string salt, string Algoritmo)
         {
-            bool passwordMatch = false;
             // Now take the salt and the password entered by the user
             // and concatenate them together.
             string hashedPasswordAndSalt = CreatePasswordHash(suppliedPassword, salt, Algoritmo);
             // Now verify them.
-            passwordMatch = hashedPasswordAndSalt.Equals(passwordHash);
+
             //passwordMatch = True
-            return passwordMatch;
+            return hashedPasswordAndSalt.Equals(passwordHash);
         }
+
+        // Pseudocode Plan:
+        // - Validate input size: must be >= 0 (to preserve existing behavior where size+1 bytes are produced)
+        // - Allocate a byte array of size + 1 to maintain original output length behavior
+        // - Use RandomNumberGenerator.GetBytes to fill the array with cryptographically strong random bytes
+        // - Convert to Base64 and return
 
         public static string CreateSalt(int size)
         {
-            // Generate a cryptographic random number using the cryptographic
-            // service provider
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-            byte[] buff = new byte[size + 1];
-            rng.GetBytes(buff);
-            // Return a Base64 string representation of the random number
+            if (size < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(size), "Salt size must be non-negative.");
+            }
+
+            byte[] buff = RandomNumberGenerator.GetBytes(size + 1);
             return Convert.ToBase64String(buff);
         }
 
         public static string CreatePasswordHash(string pwd, string salt, string algorithName)
         {
             string saltAndPwd = string.Concat(pwd, salt);
-            string hashedPwd = CreateHash(saltAndPwd, algorithName);
-            return hashedPwd;
+            return CreateHash(saltAndPwd, algorithName);
         }
 
 
         public static string CreateHash(string saltAndPassword, string algorithName)
         {
+            HashAlgorithm algorithm = algorithName switch
+            {
+                "SHA256" => SHA256.Create(),
+                "SHA384" => SHA384.Create(),
+                "SHA512" => SHA512.Create(),
+                "MD5" => MD5.Create(),
+                "SHA1" => SHA1.Create(),
+                _ => throw new ArgumentException($"Unsupported hash algorithm: {algorithName}", nameof(algorithName))
+            };
 
-            dynamic algorithm = HashAlgorithm.Create(algorithName);
             byte[] Data = algorithm.ComputeHash(Encoding.UTF8.GetBytes(saltAndPassword));
             string Hashed = "";
 
@@ -63,12 +73,6 @@ namespace Avaruz.FrameWork.Utils.Common.Security
             return Hashed;
         }
 
-        //=======================================================
-        //Service provided by Telerik (www.telerik.com)
-        //Conversion powered by NRefactory.
-        //Twitter: @telerik, @toddanglin
-        //Facebook: facebook.com/telerik
-        //=======================================================
 
     }
 }

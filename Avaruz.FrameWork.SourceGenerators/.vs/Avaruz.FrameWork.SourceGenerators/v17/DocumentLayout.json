@@ -3,10 +3,11 @@
   "WorkspaceRootPath": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}|..\\TestProject1\\TestProject1.csproj|d:\\avaruz.framework\\testproject1\\testproject1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\avaruz.framework.sourcegenerators.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|solutionrelative:avaruz.framework.sourcegenerators.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}|..\\TestProject1\\TestProject1.csproj|d:\\avaruz.framework\\testproject1\\autonotifygeneratortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A452EBCE-986E-4FEE-99C3-8E25999FE29C}|..\\SourceGenerator\\SourceGenerator.csproj|d:\\avaruz.framework\\sourcegenerator\\sourcegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\autonotifygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -16,15 +17,20 @@
       "AbsoluteMoniker": "D:0:0:{A452EBCE-986E-4FEE-99C3-8E25999FE29C}|..\\SourceGenerator\\SourceGenerator.csproj|d:\\avaruz.framework\\sourcegenerator\\notifiygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A452EBCE-986E-4FEE-99C3-8E25999FE29C}|..\\SourceGenerator\\SourceGenerator.csproj|d:\\avaruz.framework\\sourcegenerator\\sourcegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}|..\\TestProject1\\TestProject1.csproj|d:\\avaruz.framework\\testproject1\\autonotifygeneratortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\avaruz.framework.sourcegenerators.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|solutionrelative:avaruz.framework.sourcegenerators.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}|..\\TestProject1\\TestProject1.csproj|d:\\avaruz.framework\\testproject1\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A452EBCE-986E-4FEE-99C3-8E25999FE29C}|..\\SourceGenerator\\SourceGenerator.csproj|d:\\avaruz.framework\\sourcegenerator\\sourcegenerator.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|d:\\avaruz.framework\\avaruz.framework.sourcegenerators\\avaruz.framework.sourcegenerators.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{DB50B987-CEE3-47E2-9649-70050AA49886}|Avaruz.FrameWork.SourceGenerators.csproj|solutionrelative:avaruz.framework.sourcegenerators.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CC6EB17-BDCD-4B5E-82D2-0762047E3E6D}|..\\TestProject1\\TestProject1.csproj|d:\\avaruz.framework\\testproject1\\testproject1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +40,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 28,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,10 +49,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
               "$type": "Bookmark",
@@ -62,15 +64,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:1701725392:0:{683b7fa4-6a84-40c1-a43b-1803dc159f14}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1701725392:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
             },
             {
               "$type": "Bookmark",
@@ -79,18 +73,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -118,14 +100,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:11:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:13:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
@@ -135,6 +109,30 @@
             {
               "$type": "Bookmark",
               "Name": "ST:17:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
               "$type": "Bookmark",
@@ -149,8 +147,88 @@
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1701725392:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Avaruz.FrameWork.SourceGenerators",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeDocumentMoniker": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeToolTip": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-07T12:37:27.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AutoNotifyGenerator.cs",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
+              "RelativeDocumentMoniker": "AutoNotifyGenerator.cs",
+              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
+              "RelativeToolTip": "AutoNotifyGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:17:21.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Avaruz.FrameWork.SourceGenerators",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeDocumentMoniker": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
+              "RelativeToolTip": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-07T17:16:12.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutoNotifyGeneratorTests.cs",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\TestProject1\\AutoNotifyGeneratorTests.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\AutoNotifyGeneratorTests.cs",
+              "ToolTip": "D:\\Avaruz.FrameWork\\TestProject1\\AutoNotifyGeneratorTests.cs",
+              "RelativeToolTip": "..\\TestProject1\\AutoNotifyGeneratorTests.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIA7wCsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T13:07:34.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotifiyGenerator.cs",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\SourceGenerator\\NotifiyGenerator.cs",
+              "RelativeDocumentMoniker": "..\\SourceGenerator\\NotifiyGenerator.cs",
+              "ToolTip": "D:\\Avaruz.FrameWork\\SourceGenerator\\NotifiyGenerator.cs",
+              "RelativeToolTip": "..\\SourceGenerator\\NotifiyGenerator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T20:45:59.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TestProject1",
               "DocumentMoniker": "D:\\Avaruz.FrameWork\\TestProject1\\TestProject1.csproj",
               "RelativeDocumentMoniker": "..\\TestProject1\\TestProject1.csproj",
@@ -163,32 +241,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AutoNotifyGeneratorTests.cs",
-              "DocumentMoniker": "D:\\Avaruz.FrameWork\\TestProject1\\AutoNotifyGeneratorTests.cs",
-              "RelativeDocumentMoniker": "..\\TestProject1\\AutoNotifyGeneratorTests.cs",
-              "ToolTip": "D:\\Avaruz.FrameWork\\TestProject1\\AutoNotifyGeneratorTests.cs",
-              "RelativeToolTip": "..\\TestProject1\\AutoNotifyGeneratorTests.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAzwCQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T13:07:34.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoNotifyGenerator.cs",
-              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
-              "RelativeDocumentMoniker": "AutoNotifyGenerator.cs",
-              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\AutoNotifyGenerator.cs",
-              "RelativeToolTip": "AutoNotifyGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T20:41:41.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "SourceGenerator.csproj",
               "DocumentMoniker": "D:\\Avaruz.FrameWork\\SourceGenerator\\SourceGenerator.csproj",
               "RelativeDocumentMoniker": "..\\SourceGenerator\\SourceGenerator.csproj",
@@ -201,40 +253,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NotifiyGenerator.cs",
-              "DocumentMoniker": "D:\\Avaruz.FrameWork\\SourceGenerator\\NotifiyGenerator.cs",
-              "RelativeDocumentMoniker": "..\\SourceGenerator\\NotifiyGenerator.cs",
-              "ToolTip": "D:\\Avaruz.FrameWork\\SourceGenerator\\NotifiyGenerator.cs",
-              "RelativeToolTip": "..\\SourceGenerator\\NotifiyGenerator.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAqwIAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T20:45:59.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Avaruz.FrameWork.SourceGenerators",
-              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
-              "RelativeDocumentMoniker": "Avaruz.FrameWork.SourceGenerators.csproj",
-              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
-              "RelativeToolTip": "Avaruz.FrameWork.SourceGenerators.csproj",
+              "Title": "SourceGenerator",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\SourceGenerator\\SourceGenerator.csproj",
+              "RelativeDocumentMoniker": "..\\SourceGenerator\\SourceGenerator.csproj",
+              "ToolTip": "D:\\Avaruz.FrameWork\\SourceGenerator\\SourceGenerator.csproj",
+              "RelativeToolTip": "..\\SourceGenerator\\SourceGenerator.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-10T20:45:53.928Z",
+              "WhenOpened": "2025-04-07T17:17:12.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Avaruz.FrameWork.SourceGenerators.csproj",
-              "DocumentMoniker": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
-              "RelativeDocumentMoniker": "Avaruz.FrameWork.SourceGenerators.csproj",
-              "ToolTip": "D:\\Avaruz.FrameWork\\Avaruz.FrameWork.SourceGenerators\\Avaruz.FrameWork.SourceGenerators.csproj",
-              "RelativeToolTip": "Avaruz.FrameWork.SourceGenerators.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-10T17:39:57.305Z",
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "D:\\Avaruz.FrameWork\\TestProject1\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\GlobalUsings.cs",
+              "ToolTip": "D:\\Avaruz.FrameWork\\TestProject1\\GlobalUsings.cs",
+              "RelativeToolTip": "..\\TestProject1\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T17:20:41.555Z",
               "EditorCaption": ""
             }
           ]
@@ -246,6 +285,42 @@
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             }
           ]
         }

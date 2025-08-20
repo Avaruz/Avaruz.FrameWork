@@ -16,7 +16,7 @@ namespace Avaruz.FrameWork.Controls.Win.Wizard
 		{
 			get
 			{
-				DesignerVerbCollection verbs = new DesignerVerbCollection();
+				DesignerVerbCollection verbs = new();
 				verbs.Add(new DesignerVerb("Remove Page", new EventHandler(handleRemovePage)));
 
 				return verbs;
