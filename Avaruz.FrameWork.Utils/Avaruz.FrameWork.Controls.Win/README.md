@@ -1,21 +1,21 @@
-# Avaruz.FrameWork.Controls.Win
+ï»¿# Avaruz.FrameWork.Controls.Win
 
-Avaruz.FrameWork.Controls.Win es una biblioteca de controles personalizados para aplicaciones Windows Forms en .NET 9.0. Proporciona componentes avanzados como asistentes (wizards), cuadros de entrada, controles de DataGridView personalizados y más, facilitando el desarrollo de interfaces de usuario ricas y modernas.
+Avaruz.FrameWork.Controls.Win es una biblioteca de controles personalizados para aplicaciones Windows Forms en .NET 9.0. Proporciona componentes avanzados como asistentes (wizards), cuadros de entrada, controles de DataGridView personalizados y mï¿½s, facilitando el desarrollo de interfaces de usuario ricas y modernas.
 
-## Características
+## CaracterÃ­sticas
 
-- Controles de asistente (Wizard) con páginas personalizables.
+- Controles de asistente (Wizard) con pï¿½ginas personalizables.
 - Cuadros de entrada (InputBox) mejorados.
-- Columnas y celdas DataGridView con soporte para máscaras.
+- Columnas y celdas DataGridView con soporte para mï¿½scaras.
 - Controles visuales como PaneCaption y botones personalizados.
-- Integración con recursos (.resx) y soporte para localización.
+- Integraciï¿½n con recursos (.resx) y soporte para localizaciï¿½n.
 
 ## Requisitos
 
 - .NET 9.0 (Windows)
 - Visual Studio 2022 o superior
 
-## Instalación
+## InstalaciÃ³n
 
 1. Clona el repositorio:
 ```
@@ -26,7 +26,7 @@ git clone https://github.com/Avaruz/Avaruz.FrameWork
 
 ## Uso
 
-Agrega una referencia al proyecto en tu solución y utiliza los controles en tus formularios Windows Forms. Ejemplo de uso de un Wizard:
+Agrega una referencia al proyecto en tu soluciï¿½n y utiliza los controles en tus formularios Windows Forms. Ejemplo de uso de un Wizard:
 
 ```csharp
 using Avaruz.FrameWork.Controls.Win.Wizard;

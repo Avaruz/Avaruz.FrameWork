@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyTitle>Avaruz.FrameWork.Utils</AssemblyTitle>
     <Company>Avaruz</Company>
     <Product>Avaruz.FrameWork.Utils</Product>
@@ -12,12 +12,20 @@
     <PackageProjectUrl>https://bitbucket.org/Avaruz/avaruz.framework</PackageProjectUrl>
     <PackageReleaseNotes>Primer Release</PackageReleaseNotes>
     <PackageTags>Utilities Windows Forms</PackageTags>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <PropertyGroup>
@@ -34,7 +42,6 @@
     <None Remove="Avaruz.FrameWork.Utils.1.0.0.nupkg" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="9.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.1" />
   </ItemGroup>
 </Project>

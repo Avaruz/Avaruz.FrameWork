@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<ProductVersion>8.0.50727</ProductVersion>
-		<TargetFramework>net9.0-windows</TargetFramework>
+		<TargetFramework>net10.0-windows7.0</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
 		<FileUpgradeFlags />
 		<UpgradeBackupLocation />
@@ -11,39 +11,39 @@
 		<Description>Avaruz.FrameWork.Controls.Win</Description>
 		<Copyright>Copyright 2025</Copyright>
 		<Deterministic>false</Deterministic>
-		<Version>1.0.5</Version>
-		<AssemblyVersion>1.0.5</AssemblyVersion>
+		<Version>1.0.9</Version>
+		<AssemblyVersion>1.0.9</AssemblyVersion>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<Authors>Avaruz</Authors>
-		<PackageIconUrl>http://icon_url_here_or_delete_this_line/</PackageIconUrl>
-		<PackageProjectUrl>http://project_url_here_or_delete_this_line/</PackageProjectUrl>
 		<PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
-		<PackageTags>Tag1 Tag2</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Platforms>x64</Platforms>
+		<PlatformTarget>x86</PlatformTarget>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugType>full</DebugType>
 		<Optimize>true</Optimize>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	  <DebugType>full</DebugType>
+	  <Optimize>true</Optimize>
+	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 		<DebugType>none</DebugType>
 		<UseVSHostingProcess>false</UseVSHostingProcess>
-		<PlatformTarget>x86</PlatformTarget>
+		<PlatformTarget>AnyCPU</PlatformTarget>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
 		<DocumentationFile>bin\$(Configuration)\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
 	</PropertyGroup>
-	<ItemGroup>
-	  <None Include="..\..\..\Libs\MvcReportViewer\LICENSE">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Include="..\..\..\Libs\MvcReportViewer\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+	  <DebugType>none</DebugType>
+	  <UseVSHostingProcess>false</UseVSHostingProcess>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	  <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+	  <DocumentationFile>bin\$(Configuration)\Avaruz.FrameWork.Controls.Win.XML</DocumentationFile>
+	</PropertyGroup>
 	<ItemGroup>
 		<Compile Update="DataGridViewMaskedTextControl.cs">
 			<SubType>Component</SubType>
@@ -100,7 +100,16 @@
 		</EmbeddedResource>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.8" />
-		<PackageReference Include="System.Resources.Extensions" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 </Project>
